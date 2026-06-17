@@ -1,5 +1,5 @@
-// JOIN simulado em JavaScript usando map + find entre 3 entidades:
-// compras, usuarios e cervejas (equivalente ao INNER JOIN do SQL)
+// JOIN simulado em JavaScript usando map + find entre 3 entidades: compras, usuarios e cervejas (equivalente ao INNER JOIN do SQL)
+
 
 import { useState } from "react";
 
