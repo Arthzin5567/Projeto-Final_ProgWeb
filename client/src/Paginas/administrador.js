@@ -249,6 +249,7 @@ function Administrador() {
           <Link className="cabecalho-txt-it" to="/inicio">INÍCIO |</Link>
           <Link className="cabecalho-txt-it" to="/sobre">SOBRE A MARS |</Link>
           <Link className="cabecalho-txt-it" to="/contatos">CONTATOS |</Link>
+          <Link className="cabecalho-txt-it" to="/comentarios">COMENTARIOS |</Link>
           <span className="cabecalho-txt-it" style={{ cursor: 'pointer' }} onClick={logout}>SAIR |</span>
           <span className="cabecalho-txt-it">ADMIN</span>
         </nav>

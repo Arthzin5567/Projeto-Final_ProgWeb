@@ -762,6 +762,91 @@ button{
     scale: 1.2;
 }
 
+
+/*--------------------------------------------------------------------------------
+---------------------- CSS DOS COMENTARIOS -------------------------------------
+--------------------------------------------------------------------------------*/
+
+.avaliacoes-container {
+    padding: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+.input-nome,
+.input-comentario,
+.select-estrelas {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 5px;
+}
+
+.input-comentario {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contador-caracteres {
+    font-size: 14px;
+    color: gray;
+}
+
+.btn-enviar {
+    background-color: #36d417;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #0eb80b;
+}
+
+.card-avaliacao {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.nome-avaliacao {
+    margin-bottom: 10px;
+}
+
+.comentario-avaliacao {
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.nota-avaliacao {
+    margin-bottom: 10px;
+}
+
+.acoes-avaliacao {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-editar,
+.btn-excluir {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 @media (max-width: 900px){
     .cabecalho{
         flex-direction: column;
@@ -902,3 +987,5 @@ button{
 .instawpp:hover{
     scale: 1.5;
 }
+
+

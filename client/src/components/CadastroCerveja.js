@@ -77,7 +77,7 @@ function CadastroCerveja() {
                   className="form-control"
                   name="nome"
                   value={values.nome}
-                  onChange={handleChangeValues}
+                  onChange={handleChangeValues} 
                 />
               </div>
 

@@ -10,6 +10,7 @@ import Registro from './Paginas/Registro';
 import Administrador from './Paginas/administrador';
 import Cliente from './Paginas/cliente';
 import AdquiraASua from './Paginas/adquiraasua';
+import Comentarios from './Paginas/comentarios';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/inicio" element={<Inicio />} />
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/contatos" element={<Contatos />} />
+          <Route path="/comentarios" element={<Comentarios />} />
           <Route path="/login" element={<Login />} />
           <Route path="/registro" element={<Registro />} />
           <Route path="/admin" element={<Administrador />} />

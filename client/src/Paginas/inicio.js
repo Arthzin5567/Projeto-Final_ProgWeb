@@ -21,6 +21,7 @@ function Inicio() {
           <Link className="cabecalho-txt-it" to="/inicio">INÍCIO |</Link>
           <Link className="cabecalho-txt-it" to="/sobre">SOBRE A MARS |</Link>
           <Link className="cabecalho-txt-it" to="/contatos">CONTATOS |</Link>
+          <Link className="cabecalho-txt-it" to="/comentarios">COMENTARIOS |</Link>
           {!user ? (
             <Link className="cabecalho-txt-it" to="/login">ENTRAR |</Link>
           ) : (
