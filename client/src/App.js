@@ -12,6 +12,7 @@ import Cliente from './Paginas/cliente';
 import AdquiraASua from './Paginas/adquiraasua';
 import Comentarios from './Paginas/comentarios';
 
+
 function App() {
   return (
     <AuthProvider>
