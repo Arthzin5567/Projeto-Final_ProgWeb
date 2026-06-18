@@ -30,8 +30,6 @@ function App() {
           <Route path="/comentarios" element={<Comentarios />} />
           <Route path="/login" element={<Login />} />
           <Route path="/registro" element={<Registro />} />
-          <Route path="/admin" element={<Administrador />} />
-          <Route path="/cliente" element={<Cliente />} />
           <Route path="/adquiraasua" element={<AdquiraASua />} />
           <Route
             path="/admin"

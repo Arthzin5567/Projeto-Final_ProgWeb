@@ -28,7 +28,7 @@ function GerenciarClientes() {
   Axios.get('http://localhost:3001/api/clientes')
     .then((response) => {
       setClientes(response.data);
-      localStorage.setItem('clientes_cache', JSON.stringify(response.data)); // adicionar esta linha
+      localStorage.setItem('clientes_cache', JSON.stringify(response.data)); // adicionar essa linha
     })
     .catch((error) => console.error('Erro ao carregar clientes', error));
 };
