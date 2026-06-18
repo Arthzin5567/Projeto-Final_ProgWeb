@@ -25,10 +25,13 @@ function GerenciarClientes() {
   }, [user, loading, navigate]);
 
   const carregarClientes = () => {
-    Axios.get('http://localhost:3001/api/clientes')
-      .then((response) => setClientes(response.data))
-      .catch((error) => console.error('Erro ao carregar clientes', error));
-  };
+  Axios.get('http://localhost:3001/api/clientes')
+    .then((response) => {
+      setClientes(response.data);
+      localStorage.setItem('clientes_cache', JSON.stringify(response.data)); // adicionar esta linha
+    })
+    .catch((error) => console.error('Erro ao carregar clientes', error));
+};
 
   const handleCadastrar = (form, setMensagem) => {
     Axios.post('http://localhost:3001/api/clientes', form)
