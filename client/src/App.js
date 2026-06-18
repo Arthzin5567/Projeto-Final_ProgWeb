@@ -12,8 +12,8 @@ import Administrador from './Paginas/administrador';
 import Cliente from './Paginas/cliente';
 import AdquiraASua from './Paginas/adquiraasua';
 import Comentarios from './Paginas/comentarios';
-import Relatorio from './Paginas/relatorio';
 import GerenciarClientes from './components/GerenciarClientes';
+import RelatorioCompras from './Paginas/RelatorioCompras';
 
 
 function App() {
@@ -59,7 +59,7 @@ function App() {
             path="/relatorio"
             element={
               <PrivateRoute role="admin">
-                <Relatorio />
+                <RelatorioCompras />
               </PrivateRoute>
             }
           />
