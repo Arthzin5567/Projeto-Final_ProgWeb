@@ -5,7 +5,7 @@ const { createApp } = require('./app');
 
 const db = mysql.createConnection({
   host: '127.0.0.1',
-  user: 'root',
+  user: 'usuario', // Lembrar de alterar pra rodar na sua máquina!!
   port: 3306,
   password: '99766565',
   database: 'mars_cervejaria'
