@@ -422,7 +422,7 @@ function createApp(db) {
 
 module.exports = {
   SECRET_KEY,
-  createApp, 
+  createApp,
   validarEmail,
   validarNumeroPositivo,
   validarInteiroPositivo,
