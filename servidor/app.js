@@ -383,6 +383,65 @@ function createApp(db) {
     }
   });
 
+  app.post('/api/clientes', authenticateToken, somenteAdmin, async (req, res) => {
+    const { nome, email, senha } = req.body;
+    const erroValidacao = validarUsuario({ nome, email, senha, role:'cliente'});
+    if (erroValidacao) return res.status(400).json({ message: erroValidacao});
+
+    try {
+      const[rows] = await db.promise().query('SELECT id FROM usuarios WHERE email = ?', [email]);
+      if (rows.length > 0) return res.status(400).json({ message: 'Email já cadastrado'});
+
+      const hashedPassword = await bcrypt.hash(senha, 10);
+      await db.promise().query(
+        'INSERT INTO usuarios (nome, email, senha, role) VALUES (?, ?, ?, ?)',
+        [nome, email, hashedPassword, 'cliente']
+      );
+      res.status(201).json({ message: 'Cliente cadastrado com sucesso!'});
+    } catch (err){
+      res.status(500).json({ message: 'Erro ao cadastrar cliente.'});
+    }
+
+  });
+
+  app.put('/api/clientes/:id', authenticateToken, somenteAdmin, async (req, res) => {
+      const { id } = req.params;
+    const { nome, email } = req.body;
+
+    if (!nome || nome.trim().length < 3) return res.status(400).json({ message: 'Nome deve ter pelo menos 3 caracteres' });
+    if (!email || !validarEmail(email)) return res.status(400).json({ message: 'Informe um e-mail válido' });
+
+    try {
+      const [duplicado] = await db.promise().query(
+        'SELECT id FROM usuarios WHERE email = ? AND id <> ?', [email, id]
+      );
+      if (duplicado.length > 0) return res.status(400).json({ message: 'E-mail já usado por outro usuário' });
+
+      const [result] = await db.promise().query(
+        'UPDATE usuarios SET nome = ?, email = ? WHERE id = ? AND role = ?',
+        [nome, email, id, 'cliente']
+      );
+      if (result.affectedRows === 0) return res.status(404).json({ message: 'Cliente não encontrado' });
+      res.json({ message: 'Cliente atualizado com sucesso' });
+    } catch (err) {
+      res.status(500).json({ message: 'Erro ao atualizar cliente' });
+    }
+
+  });
+
+    app.delete('/api/clientes/:id', authenticateToken, somenteAdmin, async (req, res) => {
+    const { id } = req.params;
+    try {
+      const [result] = await db.promise().query(
+        'DELETE FROM usuarios WHERE id = ? AND role = ?', [id, 'cliente']
+      );
+      if (result.affectedRows === 0) return res.status(404).json({ message: 'Cliente não encontrado' });
+      res.json({ message: 'Cliente excluído com sucesso' });
+    } catch (err) {
+      res.status(500).json({ message: 'Erro ao excluir cliente' });
+    }
+  });
+
   app.post('/api/compras', authenticateToken, async (req, res) => {
     const { cerveja_id, quantidade } = req.body;
     const usuario_id = req.user.id;

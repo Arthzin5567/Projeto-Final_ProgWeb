@@ -130,7 +130,7 @@ hr{
 }
 
 body{
-    background: linear-gradient(316.12deg, #FFA800 59.23%, #FF2525 116.27%);
+    background: linear-gradient(316.12deg, #ecf01e 59.23%, #63ff25 116.27%);
     font-family: 'Poppins', sans-serif;
     animation: gradiente 7s infinite;
     transition: 1.5s;
@@ -138,107 +138,219 @@ body{
 }
 
 .cabecalho {
+
     display: flex;
+
     flex-direction: row;
+
     align-items: center;
+
     justify-content: space-around;
+
     padding: 24px;
+
     animation-name: cabecalho;
+
     animation-duration: 3s;
-    position: relative;
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    background: #FF7A00;
+
+    z-index: 50;
+
 }
+
+
 
 .cabecalho-img {
+
     height: 72px;
+
 }
+
+
 
 .cabecalho-txt {
+
     display: flex;
+
     gap: 28px;
+
     align-items: center;
+
     flex-wrap: wrap;
+
 }
+
+
 
 .cabecalho-txt-it {
+
     font-weight: 700;
+
     color: rgb(255, 255, 255);
+
     letter-spacing: 0.025em;
+
     line-height: 42px;
+
     text-decoration: none;
+
     font-weight: 500;
+
     font-size: 25px;
+
 }
+
+
 
 .mars-container{
+
     font-family: 'Alata', sans-serif;
+
     display: flex;
+
     flex-direction: row;
+
     padding-top: 200px;
+
     animation-name: container;
+
     animation-duration: 3s;
+
     position: relative;
+
 }
+
+
 
 .container-img{
+
     margin-left: 20px;
+
     width: 35%;
+
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
     justify-content: center;
+
 }
+
+
 
 .caratriste{
+
     justify-content: right;
+
     align-items: center;
+
     padding-left: 100px;
+
     margin-left: 200px;
+
 }
+
+
 
 .container-txtP{
+
     font-size: 50px;
+
     color: #fff;
+
 }
 
+
+
 .container-txtS{
+
     font-weight: 50;
+
     color: #fff;
+
     letter-spacing: 2.5%;
+
 }
+
 .inicio{
+
     display: flex;
+
     flex-direction: row;
+
 }
+
+
+
 
 
 .inicio-img{
+
     width: 20%;
+
     margin-left: 40px;
+
 }
+
+
 
 .cervejas{
+
     transition: all 0.5s;
+
     cursor: pointer;
+
 }
+
+
 
 .cervejas:hover{
+
     -webkit-transform: scale(1.2);
+
     transform: scale(1.2);
+
     -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+
     filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+
 }
 
+
+
 .inicio-txt{
+
     font-family: 'Alata', sans-serif;
+
     text-align: left;
+
     justify-content: center;
+
     align-items: center;
+
     margin-top: 200px;
+
     margin-left: 100px;
+
     font-size: 80px;
+
     color: #fff;
+
     font-weight: 600;
+
 }
+
 
 .sol-so{
     left: -600px;
@@ -253,7 +365,7 @@ body{
     width: 20%;
     position: absolute;
     left: 1100px;
-    top: 218px;
+    top: 370px;
     z-index: 1;
     transition: 0.5s;
 }
@@ -272,7 +384,7 @@ body{
     text-align: left;
     justify-content: left;
     color: #fff;
-    margin-top: 340px;
+    margin-top: 200px;
     position: absolute;
     margin-left: 150px;
     z-index: 2;
@@ -293,7 +405,7 @@ body{
     text-align: left;
     justify-content: left;
     color: #fff;
-    margin-top: 410px;
+    margin-top: 300px;
     position: absolute;
     margin-left: 150px;
     z-index: 2;
@@ -308,7 +420,7 @@ body{
 }
 
 .green-img{
-    width: 25%;
+    width: 20%;
     position: absolute;
     left: 100px;
     top: 150px;
@@ -330,7 +442,7 @@ body{
     text-align: left;
     justify-content: left;
     color: #fff;
-    margin-top: 340px;
+    margin-top: 390px;
     position: absolute;
     left: 1100px;
     z-index: 2;
@@ -350,7 +462,7 @@ body{
     text-align: left;
     justify-content: left;
     color: #fff;
-    margin-top: 410px;
+    margin-top: 480px;
     position: absolute;
     margin-left: 1100px;
     z-index: 2;
@@ -371,7 +483,7 @@ body{
 .blue-img{
     width: 25%;
     position: absolute;
-    left: 1100px;
+    left: 1099px;
     top: 218px;
     z-index: 1;
     transition: 0.5s;
@@ -486,7 +598,7 @@ button{
 .input i{
     font-size: 1.2em;
     padding: 5px;
-    background: linear-gradient(316.12deg, #FFA800 59.23%, #FF2525 116.27%);
+    background: linear-gradient(316.12deg, #0fbe1d 59.23%, #FF2525 116.27%);
     border-radius: 30px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -514,6 +626,10 @@ button{
     text-align: center;
     margin: 2rem 0;
     padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
 }
 
 .admin-tabs button,
@@ -526,7 +642,7 @@ button{
 
 .admin-tabs button{
     font-size: 18px;
-    padding: 12px 20px;
+    padding: 12px 28px;
 }
 
 .admin-tabs button:hover,
@@ -581,6 +697,11 @@ button{
     border-bottom: none;
 }
 
+.admin-lista-item > div:last-child{
+    display: flex;
+    gap: 10px;
+}
+
 .admin-action{
     font-size: 16px;
     padding: 8px 14px;
@@ -599,7 +720,7 @@ button{
     margin: 0 auto;
     background: #fff;
     border-radius: 12px;
-    padding: 12px;
+    padding: 16px 24px;
     text-align: center;
     color: #000;
     font-weight: 600;
@@ -762,10 +883,6 @@ button{
     scale: 1.2;
 }
 
-
-/*--------------------------------------------------------------------------------
----------------------- CSS DOS COMENTARIOS -------------------------------------
---------------------------------------------------------------------------------*/
 
 .avaliacoes-container {
     padding: 20px;
@@ -987,5 +1104,3 @@ button{
 .instawpp:hover{
     scale: 1.5;
 }
-
-
