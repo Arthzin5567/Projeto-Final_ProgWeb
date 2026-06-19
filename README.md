@@ -165,4 +165,36 @@ npm test
 # Com relatório de cobertura de código
 npm run test:coverage
 ```
+### ✅ Testes de sistema (Cypress E2E)
+ 
+Os testes E2E simulam um usuário real navegando pela interface. Por isso, precisam que a aplicação esteja rodando completamente.
+ 
+**Pré-requisitos:**
+ 
+- Backend rodando em `http://localhost:3001`
+- Frontend rodando em `http://localhost:3000`
+- Usuário admin cadastrado no banco com as credenciais:
+  - Email: `admin@gmail.com`
+  - Senha: `123456`
+- Ao menos uma cerveja com estoque > 0 cadastrada no banco
+- Ao menos um cliente cadastrado no banco
+**1. Com a aplicação já rodando (veja [Rodando a aplicação](#rodando-a-aplicação)), entre na pasta do cliente:**
+ 
+```bash
+cd client
+```
+ 
+**2. Abra o Cypress no modo interativo (recomendado para ver os testes rodando):**
+ 
+```bash
+npx cypress open
+```
+ 
+Selecione **E2E Testing** → escolha um navegador → clique em `testes_sistema.cy.js`.
+ 
+**3. Ou execute no modo headless (terminal, sem interface gráfica):**
+ 
+```bash
+npx cypress run
+```
 
